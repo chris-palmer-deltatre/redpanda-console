@@ -7,3 +7,6 @@ build:
 	mkdir -p docker
 	cp ./backend/console ./docker
 	cd ./docker && docker build . -t chris-palmer-deltatre/console
+
+run:
+	cd backend && CONFIG_FILEPATH=./config.yaml go run ./cmd/api/main.go
